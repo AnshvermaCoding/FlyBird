@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>Fly-Bird</title>
+  <link rel="stylesheet" href="FlyBirdStart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+  <section>
+  <div id="navBar">
+    <span id="scoreVal"><span id="scoreValue">0</span>
+      <span id="scores"> Scores</span>
+      <div id="plusLogo"><i class="fa-solid fa-plus"></i></div></span>
+    <div id="profile" onclick="profile();"></div>
+  </div>
+  </section>
+  <section>
+    <div id="background">
+    </div> 
+    <img src="Logo2.png" id="logo">
+    <div id="start" onclick="startGame();"></div>
+    <i class="fa-solid fa-cart-shopping" id="icon" onclick="shop();"></i>
+    <i class="fa-solid fa-gear" id="settingLogo" onclick="setting();"></i>
+    <i class="fa-solid fa-bars" id="creditLogo" onclick="credit();"></i>
+    <i class="fa-solid fa-gamepad" id="optionLogo" onclick="option();"></i>
+    <!-- SHOP -->
+    <div class="blocks" id="shopBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">SHOP</h2>
+      <div class="shopItems" id="item1">
+        <i class="fa-solid fa-dove birds" id="bird1"></i>
+        <p id="priceItem1" class="price">By Default</p>
+        <button id="buyBtn1" class="buyBtns" onclick="buyColor1();">USE</button>
+      </div>
+      <div class="shopItems" id="item2">
+        <i class="fa-solid fa-dove birds" id="bird2"></i>
+        <p id="priceItem2" class="price">400 score</p>
+        <button id="buyBtn2" class="buyBtns" onclick="buyColor2();">BUY</button>
+      </div>
+      <div class="shopItems" id="item3">
+        <i class="fa-solid fa-dove birds" id="bird3"></i>
+        <p id="priceItem4" class="price">800 score</p>
+        <button id="buyBtn3" class="buyBtns" onclick="buyColor3();">BUY</button>
+      </div>
+      <div class="shopItems" id="item4">
+        <i class="fa-solid fa-dove birds" id="bird4"></i>
+        <p id="priceItem4" class="price">1200 score</p>
+        <button id="buyBtn4" class="buyBtns" onclick="buyColor4();">BUY</button>
+      </div>
+      <div id="shopContainer">
+        <div id="category1" onclick="birdColorBlock();">Bird Color</div>
+        <div id="category2" onclick="backgroundBlock();">Background</div>
+      </div>
+      <div class="shopItemsB" id="item01">
+        <p id="priceItem01" class="priceB">By Default</p>
+        <button id="buyBtn01" class="buyBtnsB" onclick="buyBackground1();">USE</button>
+      </div>
+      <div class="shopItemsB" id="item02">
+        <p id="priceItem02" class="priceB">800 Score</p>
+        <button id="buyBtn02" class="buyBtnsB" onclick="buyBackground2();">BUY</button>
+      </div>
+      <div class="shopItemsB" id="item03">
+        <p id="priceItem03" class="priceB">1400 score</p>
+        <button id="buyBtn03" class="buyBtnsB" onclick="buyBackground3();">BUY</button>
+      </div>
+      <div class="shopItemsB" id="item04">
+        <p id="priceItem04" class="priceB">2000 score</p>
+        <button id="buyBtn04" class="buyBtnsB" onclick="buyBackground4();">BUY</button>
+      </div>
+    </div>
+    <!-- OPTIONS -->
+    <div class="blocks" id="optionBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">OPTIONS</h2>
+      <p id="option1">Select Difficulty</p>
+      <select id="option01">
+        <option>Easy</option>
+        <option>Mediam</option>
+        <option>Hard</option>
+        <option>Expert</option>
+      </select>
+    </div>
+    <!-- CREDIT -->
+    <div class="blocks" id="creditBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">CREDIT</h2>
+      <p class="creditText" id="text1">Fly-Bird</p>
+      <p class="creditText">Developer : Ansh Verma</p>
+      <p class="creditText">Thank You For Playing.</p>
+    </div>
+    <!-- SETTING -->
+    <div class="blocks" id="settingBlock">
+      <i class="fa-solid fa-arrow-left backArrow" onclick="closeBlocks();"></i>
+      <h2 class="blockHeadings">SETTINGS</h2>
+      <p class="settingText" id="settingText1">Sound</p>
+      <div class="toggleBtn" id="toggleBtn1" onclick="toggleBtn01();"><div class="toggleBtnCircle" id="toggleBtnCircle1"></div></div>
+      <p class="settingText" id="settingText2">Music</p>    
+      <div class="toggleBtn" id="toggleBtn2" onclick="toggleBtn02();"><div class="toggleBtnCircle" id="toggleBtnCircle2"></div></div>
+      <p class="settingText" id="settingText3">Vibrate</p>
+      <div class="toggleBtn" id="toggleBtn3" onclick="toggleBtn03();"><div class="toggleBtnCircle" id="toggleBtnCircle3"></div></div>
+      <p class="settingText" id="settingText4">Reset Game</p> 
+      <button id="resetBtn" onclick="resetGame();">Reset</button>
+    </div>
+    <!-- message --> 
+    <span id="message">USING</span>
+    <span id="message2">Not Enough Score</span>
+    <span id="message3">Game Reset</span>
+    <!-- Profile -->
+    <div id="profileBlock">
+      <i class="fa-solid fa-arrow-left" id="closeProfileBlock" onclick="closeBlocks();"></i>
+      <div id="profilePic"></div>
+      <p id="name">Player</p>
+      <div class="edit"><i class="fa-solid fa-pencil" onclick="profilePicsBlock();"></i></div>
+      <div class="edit" id="edit2" onclick="enterNameBlock();"><i class="fa-solid fa-pencil"></i></div>
+      <table id="profileData"  border="1">
+        <tr>
+          <td>Your Score</td>
+          <td id="scoreValue2">0</td>
+        </tr>
+        <tr>
+          <td>High Score</td>
+          <td id="highScoreVal">0</td>
+        </tr>
+      </table>    
+      <div id="achivement">
+        <div class="rewards" id="reward1"></div>
+        <div class="rewards" id="reward2"></div>
+        <div class="rewards" id="reward3"></div>
+        <div class="rewards" id="reward4"></div>
+        <p id="textAchivement">no achivement</p>
+      </div>
+      <div id="enterNameBox">
+        <input type="text" id="enterName" maxlength="10" placeholder="Enter Your Name">
+        <button id="ok" onclick="saveName();">Save</button>
+      </div>
+      <div id="profilePicBlock">
+        <div id="picsBlock">
+          <div class="profilePics" id="profilePic1" onclick="selectProfilePic1();"></div>
+          <div class="profilePics" id="profilePic2" onclick="selectProfilePic2();"></div>
+          <div class="profilePics" id="profilePic3" onclick="selectProfilePic3();"></div>
+          <div class="profilePics" id="profilePic4" onclick="selectProfilePic4();"></div>
+          <div class="profilePics" id="profilePic5" onclick="selectProfilePic5();"></div>
+          <div class="profilePics" id="profilePic6" onclick="selectProfilePic6();"></div>
+          <div class="profilePics" id="profilePic7" onclick="selectProfilePic7();"></div>
+          <div class="profilePics" id="profilePic8" onclick="selectProfilePic8();"></div>
+        </div>
+        <button id="ok2" onclick="closeProfilePics();">Save</button>
+     </div>
+    </div>
+  </section>
+  <section>
+      <div id="footer">
+        Fly Bird Developed By Ansh
+      </div>
+  </section>
+  <script src="flyBirdGameJs.js"></script>
+</body>
+</html>

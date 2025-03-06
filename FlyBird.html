@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="user-scalable=no">
+  <title>Fly Bird</title>
+  <link rel="stylesheet" href="flybirdcss.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+  <div id="navBar">
+    <div id="score">Score : <span id="scoreValue">0</span></div>
+    <div id="total">
+      <div id="bird1" class="birds"><i class="fa-solid fa-dove"></i></div>
+      <div id="bird2" class="birds"><i class="fa-solid fa-dove"></i></div>
+      <div id="bird3" class="birds"><i class="fa-solid fa-dove"></i></div>
+    </div>
+  </div>
+  <div id="container" onclick="fly();">
+    <p id="msg">Click To 'Start'!!</p>
+    <div id="bird"><i class="fa-solid fa-dove"></i></div>
+    <section>
+      <span id="level1" class="levels"></span>
+      <span id="level01" class="levels"></span>
+      <span id="level2" class="levels"></span>
+      <span id="level02" class="levels"></span>
+      <span id="level3" class="levels"></span>
+      <span id="level03" class="levels"></span>
+    </section>
+    <div id="gameOver">
+      <p id="gameOverMsg">Game-Over</p>
+      <button id="restart" onclick="restart();">Restart</button>
+    </div>
+      <div id="reGame">
+      <div id="totalBirds">
+        <div id="birdNo1" class="allBirds"><i class="fa-solid fa-dove"></i></div>
+        <div id="birdNo2" class="allBirds"><i class="fa-solid fa-dove"></i></div>
+        <div id="birdNo3" class="allBirds"><i class="fa-solid fa-dove"></i></div>
+      </div>
+      <button id="continue" class="btns" onclick="continueGame();">Continue</button>
+      <button id="rePlay" class="btns" onclick="restart();">Restart</button>
+      </div>
+  </div>
+  <p id="rePlayTime">1</p>
+  <div id="resumeScreen">
+    <div id="allBird">
+      <div id="birdsNo1" class="totalBird"><i class="fa-solid fa-dove"></i></div>
+      <div id="birdsNo2" class="totalBird"><i class="fa-solid fa-dove"></i></div>
+      <div id="birdsNo3" class="totalBird"><i class="fa-solid fa-dove"></i></div>
+    </div>
+    <button id="resume" class="resumeScreenBtns" onclick="resumeGame();">Resume</button>
+    <button id="restartGame" class="resumeScreenBtns" onclick="restart();">Restart</button>
+    <button id="quitGame" class="resumeScreenBtns" onclick="quitGame();">Quit</button>
+  </div>
+  <audio src="fly Sound.mp3" id="flySound"></audio>
+  <audio src="Hit Sound.mp3" id="hitSound"></audio>
+  <audio src="Game Background Music.mp3" id="backgroundMusic" loop></audio>
+  <div id="footer">
+    <i class="fa-solid fa-volume-high" id="sound" onclick="soundFunction();"></i>
+    <h3>Fly-Bird</h3>
+    <i class="fa-solid fa-pause" id="menu" onclick="menu();"></i>
+  </div>
+  <script src="flybirdjs.js"></script>
+</body>
+</html>

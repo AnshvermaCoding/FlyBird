@@ -1,0 +1,306 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  user-select: none;
+}
+body {
+  overflow-x: hidden;
+}
+#navBar {
+  height: 8rem;
+  background-color: skyblue;
+  display: flex;
+  align-items: center; 
+}
+#score {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0px 0px 0px 3.2rem;
+  color: darkslateblue;
+}
+#total {
+  height: 4rem;
+  width: 11rem;
+  position: absolute;
+  left: 78%;
+  padding: 1px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+  border-radius: 30px;
+  border: 0px solid black;
+  color: darkblue;
+}
+.birds {
+  margin: 0 3px 0 3px;
+}
+#container {
+  border: 2px solid black;
+  /* background-color: rgba(100,100,255,0.25); */
+  background: url(image1.jpg); 
+  background-size: cover;
+  z-index: 1;
+  height: 35.6rem;
+  position: relative;
+  border-radius: 0px;
+}
+#msg {
+  position: absolute; 
+  top: 45%;
+  left: 11.8%;
+  font-size: 2.5rem;
+  font-weight: bold;
+  visibility: visible;
+  z-index: -1;
+}
+#bird {
+  height: 6%;
+  width: 8%;
+  border: 0px solid black;
+  position: absolute;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-size: 65px;
+  border-radius: 50%;
+  text-shadow: 0px 0px 1px rgba(0,0,0,1);
+  z-index: -1;
+  visibility: visible;
+  border: 0px solid black;
+}
+.levels {
+  background-color: red;
+  position: absolute;
+  z-index: -3;
+  width: 8rem;
+}
+#level1 {
+  height: 30rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+#level01 {
+  height: 30rem;
+  bottom: 0px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+}
+#level2 {
+  height: 10rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  
+}
+#level02 {
+  height: 50rem;
+  bottom: 0px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  z-index: -1;
+  
+}
+#level3 {
+  height: 50rem;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+  
+}
+#level03 {
+  height: 10rem;
+  bottom: 0px;
+  border-top-left-radius: 80px;
+  border-top-right-radius: 80px;
+  z-index: -2;
+  
+}
+
+#footer {
+  height: 8rem;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: darkred;
+  font-size: 2.3rem;
+}
+#menu {
+  position: absolute;
+  left: 90%;
+  font-size: 3.7rem;
+  color: darkgreen;
+}
+#menu:active {
+  color: red;
+}
+#sound {
+  position: absolute;
+  left: 4%;
+  font-size: 3rem;
+  color: darkgreen;
+}
+#sound:active {
+  color: red;
+}
+#gameOver {
+  height: 17rem;
+  width: 35rem;
+  background-color: cornflowerblue;
+  margin: 54% auto;
+  z-index: 3;
+  border-radius: 40px;
+  border: 1px solid black;
+  visibility: hidden;
+}
+#gameOverMsg {
+  font-size: 4rem;
+  margin: 6% 0 0 17%;
+  color: cornsilk;
+  font-weight: bold;
+}
+#restart {
+  height: 6rem;
+  width: 28rem;
+  margin: 4% 0 0 10%;
+  border-radius: 40px;
+  font-size: 3rem;
+  background-color: cyan;
+  color: darkblue;
+  
+}
+#restart:active { 
+  background-color: blueviolet;
+}
+#reGame {
+  height: 17rem;
+  width: 35rem;
+  position: absolute;
+  top: 40%;
+  left: 21%;
+  background-color: cyan;
+  z-index: 3;
+  border-radius: 40px;
+  border: 2px solid black;
+  visibility: hidden;
+}
+#rePlayTime {
+  position: absolute;
+  height: 10rem;
+  width: 10rem;
+  font-size: 10rem;
+  font-weight: bold;
+  top: 45%;
+  left: 41.5%;
+  z-index: 1;
+  border: 0px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: darkblue;
+  text-shadow: 0px 0px 20px rgba(255,255,255,1);
+  visibility: hidden;
+}
+#totalBirds {
+  height: 5rem;
+  width: 18rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 24%;
+  padding: 0px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: 50px;
+  border: 0px solid black;
+  color: darkblue;
+}
+.allBirds {
+  margin: 0 10px 0 10px;
+}
+.btns {
+  height: 6rem;
+  width: 15rem;
+  border-radius: 50px;
+  font-size: 3rem;
+  background-color: paleturquoise;
+  color: darkblue;
+  margin: 9rem 8px;
+}
+.btns:active { 
+  background-color: blueviolet;
+}
+#continue {
+  margin-left: 1.75rem;
+}
+#resumeScreen {
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  z-index: 1;
+  height: 38rem;
+  width: 40rem;
+  border: 1px solid black;
+  border-radius: 40px;
+  background-color: aqua;
+  visibility: hidden;
+}
+#allBird {
+  height: 5rem;
+  width: 18rem;
+  position: absolute;
+  top: 3rem;
+  left: 27.7%;
+  padding: 0px;
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  border-radius: 50px;
+  border: 0px solid black;
+  color: darkblue;
+}
+.totalBird {
+  margin: 0 15px 0 15px;
+}
+.resumeScreenBtns {
+  height: 10rem;
+  width: 35rem;
+  border-radius: 80px;
+  position: absolute;
+  top: 11rem;
+  left: 2.4rem;
+  font-size: 4rem;
+  background-color: lavender;
+}
+.resumeScreenBtns:active {
+  background-color: aliceblue;
+}
+#resume {
+  display: none;
+}
+#restartGame {
+  top: 10rem;
+}
+#quitGame {
+  top: 22rem;
+}
+@media(max-height:1590px) {
+  #container {
+    height: 83rem;
+  }
+}
+@media(min-height:1590px) {
+  #container {
+    height: 97rem;
+  }
+  #gameOver {
+    margin: 63% auto;
+  }
+  #resumeScreen {
+    top: 32%;
+  }
+}
