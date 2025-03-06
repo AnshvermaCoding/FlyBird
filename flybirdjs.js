@@ -181,12 +181,12 @@ function fly() {
   }
   if(soundIs === "true") {
     flySound.currentTime = 0.05;
-    flySound.volume = "0.2";
+    flySound.volume = "0.1";
     flySound.play();
   }
   if(musicIs === "true") {
     musicIs === "false";
-    backgroundMusic.volume = "0.1";
+    backgroundMusic.volume = "0.2";
     backgroundMusic.play();
   }
 }
