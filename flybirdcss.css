@@ -38,7 +38,7 @@ body {
 #container {
   border: 2px solid black;
   /* background-color: rgba(100,100,255,0.25); */
-  background: url(image1.jpg); 
+  background: url(Image1.jpg); 
   background-size: cover;
   z-index: 1;
   height: 35.6rem;
