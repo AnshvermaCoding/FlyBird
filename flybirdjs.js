@@ -186,7 +186,7 @@ function fly() {
   }
   if(musicIs === "true") {
     musicIs === "false";
-    backgroundMusic.volume = "0.2";
+    backgroundMusic.volume = "0.1";
     backgroundMusic.play();
   }
 }
